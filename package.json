@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "div": "nodemon src/index.js "
+    "dev": "nodemon r- dotenv/config--experimental-json-module src/index.js "
   },
   "author": "",
   "license": "ISC",
