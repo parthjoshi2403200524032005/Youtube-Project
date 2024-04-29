@@ -1,10 +1,9 @@
 const acyncHandler = (requestHandler) => {
-  ;(req, res, next) => {
+  return  (req, res, next) => {
     Promise.resolve(requestHandler(req, res, next)).catch((err) => next(err))
   }
 }
 
-export { acyncHandler }
 
 // const acyncHandler = (fn) => async (req,res,next) => {
 //     try {
@@ -14,6 +13,8 @@ export { acyncHandler }
 //         res.status(error.code || 500).json({
 //             success: false,
 //             message: error.message
-//         })
-//     }
-// }
+//           })
+//         }
+//       }
+
+      export { acyncHandler }
